@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE client-cache PUBLIC
+    "-//GemStone Systems, Inc.//GemFire Declarative Caching 8.0//EN"
+    "http://www.gemstone.com/dtd/cache8_0.dtd">
+<client-cache copy-on-read="false">
+
+	<pool name="client" subscription-enabled="true"
+		max-connections="100" pr-single-hop-enabled="false">
+<!-- 		<locator host="10.34.58.107" port="10334" /> -->
+		<!-- <locator host="10.0.2.15" port="10334" /> -->
+		<!-- <locator host="192.168.56.1" port="10334" /> -->
+		<!-- <locator host="127.0.0.1" port="10334" /> -->
+		<locator host="192.168.0.108" port="10334" />
+		
+	</pool>
+	<region name="historyRate">
+		<region-attributes refid="CACHING_PROXY">
+		</region-attributes>
+	</region>
+	
+	<region name="cis_cust_prod_hold">
+		<region-attributes refid="CACHING_PROXY">
+		</region-attributes>
+	</region>
+	<region name="cis_cust_info">
+		<region-attributes refid="CACHING_PROXY">
+		</region-attributes>
+	</region>
+	<region name="cis_cust_base_info">
+		<region-attributes refid="CACHING_PROXY">
+		</region-attributes>
+	</region>
+	
+	<region name="region_PT_Test2" >
+		<region-attributes refid="CACHING_PROXY">
+		</region-attributes>
+	</region>
+
+</client-cache>
