@@ -2,7 +2,6 @@ package com.wntime.select.test;
 
 import java.util.ArrayList;
 
-import org.apache.geode.cache.Region;
 import org.apache.geode.cache.client.ClientCache;
 import org.apache.geode.cache.client.ClientCacheFactory;
 import org.apache.geode.cache.query.FunctionDomainException;
@@ -21,14 +20,14 @@ import io.pivotal.cso.loaddata.CisCustBaseInfo;
 
 
 
-public class JMClient_get extends AbstractJavaSamplerClient {
+public class JMClient_cis_cust_base_info extends AbstractJavaSamplerClient {
 	private String locator;
 	private int port;
 	private String region;
 	private ClientCache cache;
 
 	public void setupTest(JavaSamplerContext jsc) {
-		this.locator = jsc.getParameter("locator", "192.168.56.1");
+		this.locator = jsc.getParameter("locator", "10.34.58.107");
 		this.port = Integer.parseInt(jsc.getParameter("port", "10334"));
 		this.region = jsc.getParameter("region", "cis_cust_base_info");
 
@@ -36,18 +35,15 @@ public class JMClient_get extends AbstractJavaSamplerClient {
 				+ this.locator + " region=" + this.region);
 		
 		cache = new ClientCacheFactory().addPoolLocator(this.locator, this.port)
-				.setPoolSubscriptionEnabled(true).setPoolSubscriptionRedundancy(1)
-				.setPoolReadTimeout(100000).setPdxReadSerialized(true)
-				.set("log-level", "info")
-				.set("cache-xml-file", "cacheClient.xml")
-				.create();
+				.setPoolSubscriptionEnabled(true).setPoolSubscriptionRedundancy(1).setPoolReadTimeout(100000)
+				.setPdxReadSerialized(true).set("log-level", "info").create();
 	}
 
 	public Arguments getDefaultParameters() {
 		Arguments params = new Arguments();
 		params.addArgument("port", "10334");
 		params.addArgument("region", "cis_cust_base_info");
-		params.addArgument("locator", "192.168.56.1");
+		params.addArgument("locator", "10.34.58.107");
 		return params;
 	}
 
@@ -55,15 +51,26 @@ public class JMClient_get extends AbstractJavaSamplerClient {
 		SampleResult sp = new SampleResult();
 		sp.sampleStart();
 		
-		
+		String oql = "select * from /" + this.region;
+		QueryService service = cache.getQueryService();
+		Query query = service.newQuery(oql);
 		try {
-			
-			 Region<String, CisCustBaseInfo> region = this.cache.getRegion(this.region);
-		      CisCustBaseInfo cisCustBaseInfo = (CisCustBaseInfo)region.get("0001111111111138274");
-		      cisCustBaseInfo.setCust_id("0001111111111138275");
-		      region.put("0001111111111138275", cisCustBaseInfo);
-		      
-		      sp.setDataEncoding("UTF-8");
+			SelectResults<CisCustBaseInfo> result = (SelectResults<CisCustBaseInfo>) query.execute();
+			String content = "";
+			int size = result.size();
+			// Iterate through your ResultSet.
+			// CisCustBaseInfo p = (CisCustBaseInfo)results.iterator().next();
+			ArrayList<CisCustBaseInfo> list = new ArrayList<CisCustBaseInfo>(size);
+			for (CisCustBaseInfo p : result) {
+				list.add(p);
+			}
+			System.out.println("Result:");
+			for (CisCustBaseInfo p : list) {
+				System.out.println(p.getCust_id());
+			}
+			sp.setResponseMessage(content);
+			sp.setDataEncoding("UTF-8");
+			sp.setResponseData("返回值：" + content);
 
 			sp.sampleEnd();
 			sp.setSuccessful(true);
@@ -84,11 +91,11 @@ public class JMClient_get extends AbstractJavaSamplerClient {
 	
 	public static void main(String[] args) {
 		Arguments params = new Arguments();
-		params.addArgument("locator", "192.168.56.1");
+		params.addArgument("locator", "10.34.58.107");
 		params.addArgument("port", "10334");
 		params.addArgument("region", "cis_cust_base_info");
 		JavaSamplerContext arg0 = new JavaSamplerContext(params);
-		JMClient_get test = new JMClient_get();
+		JMClient_cis_cust_base_info test = new JMClient_cis_cust_base_info();
 		test.setupTest(arg0);
 		test.runTest(arg0);
 		test.teardownTest(arg0);

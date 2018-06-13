@@ -76,40 +76,14 @@ public class DataLoadBatchApplication {
 				.flow(stepImportCisCustProdHold)
 				.next(stepImportCisCustBaseInfo)
 				.next(stepImportCisCustInfo)
-				 .next(stepMoreCisCustBaseInfo)
-				 .next(stepMoreCisCustInfo)
+//				 .next(stepMoreCisCustBaseInfo)
+//				 .next(stepMoreCisCustInfo)
 				.end().build();
 	}
 	
 	
 	
 	
-	/*public static void main(String[] args) throws Exception {
-
-	if (args.length < 1) {
-		log.error("Command missing.");
-		System.exit(1);
-	}
-
-	try {
-		switch (args[0]) {
-		case "insert":
-			long startTime = System.currentTimeMillis();
-			ClientCache cache = new ClientCacheFactory().set("name", "ClientWorker")
-					.set("cache-xml-file", "cacheClient.xml").create();
-			SpringApplication.run(DataLoadBatchApplication.class, args);
-			long endTime = System.currentTimeMillis();
-			System.out.println("数据导入的时间" + (endTime - startTime) + "ms");
-
-			break;
-		}
-	} catch (Throwable e) {
-		log.error("Error!", e);
-		System.exit(1);
-
-	}
-
-
-}*/
+	
 
 }

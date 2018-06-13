@@ -1527,3 +1527,125 @@ Caused by: java.net.ConnectException: Connection refused: connect
 2018-06-12 17:11:00,566 INFO  [Thread-7] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2018-06-12 17:11:00,567 INFO  [Thread-7] org.hibernate.tool.hbm2ddl.SchemaExport : HHH000227: Running hbm2ddl schema export
 2018-06-12 17:11:00,568 INFO  [Thread-7] org.hibernate.tool.hbm2ddl.SchemaExport : HHH000230: Schema export complete
+2018-06-13 10:52:58,374 INFO  [main] io.pivotal.cso.loaddata.DataLoadBatchApplication : Starting DataLoadBatchApplication on DESKTOP-HV8B6H8 with PID 25232 (D:\Git\guangda_test\loadData_spBatch_2\target\classes started by han in D:\Git\guangda_test\loadData_spBatch_2)
+2018-06-13 10:52:58,385 DEBUG [main] io.pivotal.cso.loaddata.DataLoadBatchApplication : Running with Spring Boot v1.4.1.RELEASE, Spring v4.3.3.RELEASE
+2018-06-13 10:52:58,386 INFO  [main] io.pivotal.cso.loaddata.DataLoadBatchApplication : No active profile set, falling back to default profiles: default
+2018-06-13 10:52:58,919 INFO  [main] org.springframework.context.annotation.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6cf31447: startup date [Wed Jun 13 10:52:58 CST 2018]; root of context hierarchy
+2018-06-13 10:52:59,757 INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory : Overriding bean definition for bean 'jobImportAllData' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=dataLoadBatchApplication_gateway_insert; factoryMethodName=jobImportAllData; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [io/pivotal/cso/loaddata/DataLoadBatchApplication_gateway_insert.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=dataLoadBatchApplication_gateway_put; factoryMethodName=jobImportAllData; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [io/pivotal/cso/loaddata/DataLoadBatchApplication_gateway_put.class]]
+2018-06-13 10:52:59,758 INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory : Overriding bean definition for bean 'jobImportAllData' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=dataLoadBatchApplication_gateway_put; factoryMethodName=jobImportAllData; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [io/pivotal/cso/loaddata/DataLoadBatchApplication_gateway_put.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=dataLoadBatchApplication; factoryMethodName=jobImportAllData; initMethodName=null; destroyMethodName=(inferred); defined in io.pivotal.cso.loaddata.DataLoadBatchApplication]
+2018-06-13 10:52:59,814 INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory : Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Dbcp2; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Dbcp2.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Tomcat.class]]
+2018-06-13 10:52:59,971 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-06-13 10:53:00,318 WARN  [main] org.springframework.context.annotation.ConfigurationClassEnhancer : @Bean method ScopeConfiguration.stepScope is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2018-06-13 10:53:00,330 WARN  [main] org.springframework.context.annotation.ConfigurationClassEnhancer : @Bean method ScopeConfiguration.jobScope is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2018-06-13 10:53:01,363 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-13 10:53:01,403 INFO  [main] org.hibernate.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-13 10:53:01,644 INFO  [main] org.hibernate.Version : HHH000412: Hibernate Core {5.0.11.Final}
+2018-06-13 10:53:01,647 INFO  [main] org.hibernate.cfg.Environment : HHH000206: hibernate.properties not found
+2018-06-13 10:53:01,648 INFO  [main] org.hibernate.cfg.Environment : HHH000021: Bytecode provider name : javassist
+2018-06-13 10:53:01,769 INFO  [main] org.hibernate.annotations.common.Version : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-13 10:53:02,099 INFO  [main] org.hibernate.dialect.Dialect : HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-06-13 10:53:02,726 INFO  [main] org.hibernate.tool.hbm2ddl.SchemaExport : HHH000227: Running hbm2ddl schema export
+2018-06-13 10:53:02,729 INFO  [main] org.hibernate.tool.hbm2ddl.SchemaExport : HHH000230: Schema export complete
+2018-06-13 10:53:02,770 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-13 10:53:04,198 WARN  [main] org.springframework.boot.autoconfigure.batch.BasicBatchConfigurer : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
+2018-06-13 10:53:04,202 INFO  [main] org.springframework.batch.core.repository.support.JobRepositoryFactoryBean : No database type set, using meta data indicating: HSQL
+2018-06-13 10:53:04,497 INFO  [main] org.springframework.batch.core.launch.support.SimpleJobLauncher : No TaskExecutor has been set, defaulting to synchronous executor.
+2018-06-13 10:53:04,519 INFO  [main] org.springframework.jdbc.datasource.init.ScriptUtils : Executing SQL script from class path resource [org/springframework/batch/core/schema-hsqldb.sql]
+2018-06-13 10:53:04,525 INFO  [main] org.springframework.jdbc.datasource.init.ScriptUtils : Executed SQL script from class path resource [org/springframework/batch/core/schema-hsqldb.sql] in 6 ms.
+2018-06-13 10:53:05,555 INFO  [main] org.mongodb.driver.cluster : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-06-13 10:53:05,903 INFO  [main] org.springframework.ui.freemarker.SpringTemplateLoader : SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.context.annotation.AnnotationConfigApplicationContext@6cf31447: startup date [Wed Jun 13 10:52:58 CST 2018]; root of context hierarchy] and template loader path [classpath:/templates/]
+2018-06-13 10:53:05,907 WARN  [main] org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2018-06-13 10:53:06,084 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter : Registering beans for JMX exposure on startup
+2018-06-13 10:53:06,111 INFO  [main] org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner : Running default command line with: [insert]
+2018-06-13 10:53:06,318 INFO  [main] org.springframework.batch.core.launch.support.SimpleJobLauncher : Job: [FlowJob: [name=jobImportCisCustProdHold]] launched with the following parameters: [{run.id=1}]
+2018-06-13 10:53:06,337 INFO  [main] org.springframework.batch.core.job.SimpleStepHandler : Executing step: [stepImportCisCustProdHold]
+2018-06-13 10:53:06,559 INFO  [main] org.springframework.batch.core.job.SimpleStepHandler : Executing step: [stepImportCisCustBaseInfo]
+2018-06-13 10:53:06,634 INFO  [cluster-ClusterId{value='5b208711fc66ec6290c0b5ea', description='null'}-localhost:27017] org.mongodb.driver.cluster : Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	... 3 common frames omitted
+2018-06-13 10:53:06,733 INFO  [main] org.springframework.batch.core.job.SimpleStepHandler : Executing step: [stepImportCisCustInfo]
+2018-06-13 10:53:06,864 INFO  [main] org.springframework.batch.core.launch.support.SimpleJobLauncher : Job: [FlowJob: [name=jobImportCisCustProdHold]] completed with the following parameters: [{run.id=1}] and the following status: [COMPLETED]
+2018-06-13 10:53:06,866 INFO  [main] io.pivotal.cso.loaddata.DataLoadBatchApplication : Started DataLoadBatchApplication in 9.352 seconds (JVM running for 14.183)
+2018-06-13 10:53:06,879 INFO  [Thread-7] org.springframework.context.annotation.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@6cf31447: startup date [Wed Jun 13 10:52:58 CST 2018]; root of context hierarchy
+2018-06-13 10:53:06,883 INFO  [Thread-7] org.springframework.jmx.export.annotation.AnnotationMBeanExporter : Unregistering JMX-exposed beans on shutdown
+2018-06-13 10:53:06,883 INFO  [Thread-7] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-06-13 10:53:06,884 INFO  [Thread-7] org.hibernate.tool.hbm2ddl.SchemaExport : HHH000227: Running hbm2ddl schema export
+2018-06-13 10:53:06,885 INFO  [Thread-7] org.hibernate.tool.hbm2ddl.SchemaExport : HHH000230: Schema export complete
+2018-06-13 14:48:57,551 INFO  [main] io.pivotal.cso.loaddata.DataLoadBatchApplication : Starting DataLoadBatchApplication on DESKTOP-HV8B6H8 with PID 2056 (D:\Git\guangda_test\loadData_spBatch_2\target\classes started by han in D:\Git\guangda_test\loadData_spBatch_2)
+2018-06-13 14:48:57,621 DEBUG [main] io.pivotal.cso.loaddata.DataLoadBatchApplication : Running with Spring Boot v1.4.1.RELEASE, Spring v4.3.3.RELEASE
+2018-06-13 14:48:57,622 INFO  [main] io.pivotal.cso.loaddata.DataLoadBatchApplication : No active profile set, falling back to default profiles: default
+2018-06-13 14:48:58,327 INFO  [main] org.springframework.context.annotation.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@1549bba7: startup date [Wed Jun 13 14:48:58 CST 2018]; root of context hierarchy
+2018-06-13 14:49:00,664 INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory : Overriding bean definition for bean 'jobImportAllData' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=dataLoadBatchApplication_gateway_insert; factoryMethodName=jobImportAllData; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [io/pivotal/cso/loaddata/DataLoadBatchApplication_gateway_insert.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=dataLoadBatchApplication_gateway_put; factoryMethodName=jobImportAllData; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [io/pivotal/cso/loaddata/DataLoadBatchApplication_gateway_put.class]]
+2018-06-13 14:49:00,669 INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory : Overriding bean definition for bean 'jobImportAllData' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=dataLoadBatchApplication_gateway_put; factoryMethodName=jobImportAllData; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [io/pivotal/cso/loaddata/DataLoadBatchApplication_gateway_put.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=dataLoadBatchApplication; factoryMethodName=jobImportAllData; initMethodName=null; destroyMethodName=(inferred); defined in io.pivotal.cso.loaddata.DataLoadBatchApplication]
+2018-06-13 14:49:00,802 INFO  [main] org.springframework.beans.factory.support.DefaultListableBeanFactory : Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Dbcp2; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Dbcp2.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Tomcat.class]]
+2018-06-13 14:49:00,996 INFO  [main] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-06-13 14:49:01,530 WARN  [main] org.springframework.context.annotation.ConfigurationClassEnhancer : @Bean method ScopeConfiguration.stepScope is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2018-06-13 14:49:01,546 WARN  [main] org.springframework.context.annotation.ConfigurationClassEnhancer : @Bean method ScopeConfiguration.jobScope is non-static and returns an object assignable to Spring's BeanFactoryPostProcessor interface. This will result in a failure to process annotations such as @Autowired, @Resource and @PostConstruct within the method's declaring @Configuration class. Add the 'static' modifier to this method to avoid these container lifecycle issues; see @Bean javadoc for complete details.
+2018-06-13 14:49:03,257 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-06-13 14:49:03,334 INFO  [main] org.hibernate.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-06-13 14:49:03,557 INFO  [main] org.hibernate.Version : HHH000412: Hibernate Core {5.0.11.Final}
+2018-06-13 14:49:03,562 INFO  [main] org.hibernate.cfg.Environment : HHH000206: hibernate.properties not found
+2018-06-13 14:49:03,565 INFO  [main] org.hibernate.cfg.Environment : HHH000021: Bytecode provider name : javassist
+2018-06-13 14:49:03,740 INFO  [main] org.hibernate.annotations.common.Version : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-06-13 14:49:04,252 INFO  [main] org.hibernate.dialect.Dialect : HHH000400: Using dialect: org.hibernate.dialect.HSQLDialect
+2018-06-13 14:49:05,004 INFO  [main] org.hibernate.tool.hbm2ddl.SchemaExport : HHH000227: Running hbm2ddl schema export
+2018-06-13 14:49:05,008 INFO  [main] org.hibernate.tool.hbm2ddl.SchemaExport : HHH000230: Schema export complete
+2018-06-13 14:49:05,052 INFO  [main] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-06-13 14:49:06,989 WARN  [main] org.springframework.boot.autoconfigure.batch.BasicBatchConfigurer : JPA does not support custom isolation levels, so locks may not be taken when launching Jobs
+2018-06-13 14:49:07,002 INFO  [main] org.springframework.batch.core.repository.support.JobRepositoryFactoryBean : No database type set, using meta data indicating: HSQL
+2018-06-13 14:49:07,507 INFO  [main] org.springframework.batch.core.launch.support.SimpleJobLauncher : No TaskExecutor has been set, defaulting to synchronous executor.
+2018-06-13 14:49:07,543 INFO  [main] org.springframework.jdbc.datasource.init.ScriptUtils : Executing SQL script from class path resource [org/springframework/batch/core/schema-hsqldb.sql]
+2018-06-13 14:49:07,552 INFO  [main] org.springframework.jdbc.datasource.init.ScriptUtils : Executed SQL script from class path resource [org/springframework/batch/core/schema-hsqldb.sql] in 8 ms.
+2018-06-13 14:49:08,835 INFO  [main] org.mongodb.driver.cluster : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2018-06-13 14:49:09,256 INFO  [main] org.springframework.ui.freemarker.SpringTemplateLoader : SpringTemplateLoader for FreeMarker: using resource loader [org.springframework.context.annotation.AnnotationConfigApplicationContext@1549bba7: startup date [Wed Jun 13 14:48:58 CST 2018]; root of context hierarchy] and template loader path [classpath:/templates/]
+2018-06-13 14:49:09,265 WARN  [main] org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration : Cannot find template location(s): [classpath:/templates/] (please add some templates, check your FreeMarker configuration, or set spring.freemarker.checkTemplateLocation=false)
+2018-06-13 14:49:09,475 INFO  [main] org.springframework.jmx.export.annotation.AnnotationMBeanExporter : Registering beans for JMX exposure on startup
+2018-06-13 14:49:09,526 INFO  [main] org.springframework.boot.autoconfigure.batch.JobLauncherCommandLineRunner : Running default command line with: [insert]
+2018-06-13 14:49:09,739 INFO  [main] org.springframework.batch.core.launch.support.SimpleJobLauncher : Job: [FlowJob: [name=jobImportCisCustProdHold]] launched with the following parameters: [{run.id=1}]
+2018-06-13 14:49:09,767 INFO  [main] org.springframework.batch.core.job.SimpleStepHandler : Executing step: [stepImportCisCustProdHold]
+2018-06-13 14:49:09,896 INFO  [cluster-ClusterId{value='5b20be64fc66ec0808a1ab15', description='null'}-localhost:27017] org.mongodb.driver.cluster : Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:63)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:114)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:50)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:58)
+	... 3 common frames omitted
+2018-06-13 14:49:10,061 INFO  [main] org.springframework.batch.core.job.SimpleStepHandler : Executing step: [stepImportCisCustBaseInfo]
+2018-06-13 14:49:10,240 INFO  [main] org.springframework.batch.core.job.SimpleStepHandler : Executing step: [stepImportCisCustInfo]
+2018-06-13 14:49:10,578 INFO  [main] org.springframework.batch.core.launch.support.SimpleJobLauncher : Job: [FlowJob: [name=jobImportCisCustProdHold]] completed with the following parameters: [{run.id=1}] and the following status: [COMPLETED]
+2018-06-13 14:49:10,581 INFO  [main] io.pivotal.cso.loaddata.DataLoadBatchApplication : Started DataLoadBatchApplication in 14.22 seconds (JVM running for 18.499)
+2018-06-13 14:49:10,584 INFO  [Thread-7] org.springframework.context.annotation.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@1549bba7: startup date [Wed Jun 13 14:48:58 CST 2018]; root of context hierarchy
+2018-06-13 14:49:10,593 INFO  [Thread-7] org.springframework.jmx.export.annotation.AnnotationMBeanExporter : Unregistering JMX-exposed beans on shutdown
+2018-06-13 14:49:10,595 INFO  [Thread-7] org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-06-13 14:49:10,596 INFO  [Thread-7] org.hibernate.tool.hbm2ddl.SchemaExport : HHH000227: Running hbm2ddl schema export
+2018-06-13 14:49:10,598 INFO  [Thread-7] org.hibernate.tool.hbm2ddl.SchemaExport : HHH000230: Schema export complete

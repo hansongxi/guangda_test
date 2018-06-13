@@ -1,3 +1,4 @@
+D:\Git\guangda_test\loadData_spBatch_2\src\main\java\io\pivotal\cso\loaddata\DataLoadBatchApplication_gateway_insert.java
 D:\Git\guangda_test\loadData_spBatch_2\src\main\java\io\pivotal\cso\loaddata\BatchConfigurationCisCustProdHold.java
 D:\Git\guangda_test\loadData_spBatch_2\src\main\java\io\pivotal\cso\loaddata\CisCustProdHold.java
 D:\Git\guangda_test\loadData_spBatch_2\src\main\java\io\pivotal\cso\loaddata\SelectData.java
@@ -5,6 +6,7 @@ D:\Git\guangda_test\loadData_spBatch_2\src\main\java\io\pivotal\cso\loaddata\Cis
 D:\Git\guangda_test\loadData_spBatch_2\src\main\java\io\pivotal\cso\loaddata\ItemGenerator.java
 D:\Git\guangda_test\loadData_spBatch_2\src\main\java\io\pivotal\cso\loaddata\DataLoadBatchApplication.java
 D:\Git\guangda_test\loadData_spBatch_2\src\main\java\com\wntime\select\test\SelectDataCisCustnfo.java
+D:\Git\guangda_test\loadData_spBatch_2\src\main\java\com\wntime\select\test\JMClient_cis_cust_base_info.java
 D:\Git\guangda_test\loadData_spBatch_2\src\main\java\io\pivotal\cso\loaddata\BatchConfigurationHistoryRate.java
 D:\Git\guangda_test\loadData_spBatch_2\src\main\java\io\pivotal\cso\loaddata\BatchConfigurationCisCustBaseInfo.java
 D:\Git\guangda_test\loadData_spBatch_2\src\main\java\com\wntime\select\test\SelectDataCisCustBaseInfo_test.java
@@ -14,5 +16,7 @@ D:\Git\guangda_test\loadData_spBatch_2\src\main\java\com\wntime\select\test\JMCl
 D:\Git\guangda_test\loadData_spBatch_2\src\main\java\io\pivotal\cso\loaddata\BatchConfigurationCisCustInfo.java
 D:\Git\guangda_test\loadData_spBatch_2\src\main\java\io\pivotal\cso\loaddata\CisCustBaseInfo.java
 D:\Git\guangda_test\loadData_spBatch_2\src\main\java\com\wntime\select\test\SelectDataCisCustProdHold.java
+D:\Git\guangda_test\loadData_spBatch_2\src\main\java\com\wntime\select\test\TransactionDemo.java
 D:\Git\guangda_test\loadData_spBatch_2\src\main\java\io\pivotal\cso\loaddata\CisCustProdHold2.java
+D:\Git\guangda_test\loadData_spBatch_2\src\main\java\io\pivotal\cso\loaddata\MyOpration.java
 D:\Git\guangda_test\loadData_spBatch_2\src\main\java\com\wntime\select\test\SelectDataCisCustBaseInfo.java
