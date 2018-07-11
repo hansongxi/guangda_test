@@ -3,9 +3,12 @@ package io.pivotal.cso.loaddata;
 import java.io.Serializable;
 
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+import org.apache.geode.pdx.PdxReader;
+import org.apache.geode.pdx.PdxSerializable;
+import org.apache.geode.pdx.PdxWriter;
 
 
-public class CisCustBaseInfo implements Comparable<CisCustBaseInfo>,Serializable{
+public class CisCustBaseInfo implements Comparable<CisCustBaseInfo>,PdxSerializable{
 	/**
 	 * 
 	 */
@@ -282,6 +285,76 @@ public class CisCustBaseInfo implements Comparable<CisCustBaseInfo>,Serializable
 
 	public void setOpen_org_id(String open_org_id) {
 		this.open_org_id = open_org_id;
+	}
+
+	@Override
+	public void toData(PdxWriter writer) {
+		// TODO Auto-generated method stub
+		writer.writeString("cust_id",cust_id);
+		writer.writeString("zone_cd",zone_cd);
+		writer.writeString("org_id",org_id);
+		writer.writeString("iden_type_cd",iden_type_cd);
+		writer.writeString("iden_num",iden_num);
+		writer.writeString("cust_name",cust_name);
+		writer.writeString("gender_cd",gender_cd);
+		writer.writeString("birthday",birthday);
+		writer.writeString("age",age);
+		writer.writeString("age_lvl_id",age_lvl_id);
+		writer.writeString("life_lvl_id",life_lvl_id);
+		writer.writeString("marry_cd",marry_cd);
+		writer.writeString("education_cd",education_cd);
+		writer.writeString("industry_cd",industry_cd);
+		writer.writeString("comp_industry_class_cd",comp_industry_class_cd);
+		writer.writeDouble("income",income);
+		writer.writeString("income_lvl_id",income_lvl_id);
+		writer.writeDouble("ccd_limit",ccd_limit);
+		writer.writeString("ccd_limit_lvl_id",ccd_limit_lvl_id);
+		writer.writeString("open_dt",open_dt);
+		writer.writeString("expire_dt",expire_dt);
+		writer.writeString("cust_last_fin_txn_dt",cust_last_fin_txn_dt);
+		writer.writeString("pty_type_cd",pty_type_cd);
+		writer.writeString("cust_status_cd",cust_status_cd);
+		writer.writeString("combank_org_id",combank_org_id);
+		writer.writeString("employee_id",employee_id);
+		writer.writeString("employee_name",employee_name);
+		writer.writeString("open_teller_id",open_teller_id);
+		writer.writeString("open_org_id",open_org_id);
+
+		
+	}
+
+	@Override
+	public void fromData(PdxReader reader) {
+		// TODO Auto-generated method stub
+		cust_id=reader.readString("cust_id");
+		zone_cd=reader.readString("zone_cd");
+		org_id=reader.readString("org_id");
+		iden_type_cd=reader.readString("iden_type_cd");
+		iden_num=reader.readString("iden_num");
+		cust_name=reader.readString("cust_name");
+		gender_cd=reader.readString("gender_cd");
+		birthday=reader.readString("birthday");
+		age=reader.readString("age");
+		age_lvl_id=reader.readString("age_lvl_id");
+		life_lvl_id=reader.readString("life_lvl_id");
+		marry_cd=reader.readString("marry_cd");
+		education_cd=reader.readString("education_cd");
+		industry_cd=reader.readString("industry_cd");
+		comp_industry_class_cd=reader.readString("comp_industry_class_cd");
+		income=reader.readDouble("income");
+		income_lvl_id=reader.readString("income_lvl_id");
+		ccd_limit=reader.readDouble("ccd_limit");
+		ccd_limit_lvl_id=reader.readString("ccd_limit_lvl_id");
+		open_dt=reader.readString("open_dt");
+		expire_dt=reader.readString("expire_dt");
+		cust_last_fin_txn_dt=reader.readString("cust_last_fin_txn_dt");
+		pty_type_cd=reader.readString("pty_type_cd");
+		cust_status_cd=reader.readString("cust_status_cd");
+		combank_org_id=reader.readString("combank_org_id");
+		employee_id=reader.readString("employee_id");
+		employee_name=reader.readString("employee_name");
+		open_teller_id=reader.readString("open_teller_id");
+		open_org_id=reader.readString("open_org_id");
 	}
 
 //	@Override

@@ -2,9 +2,13 @@ package io.pivotal.cso.loaddata;
 
 import java.io.Serializable;
 
+import org.apache.geode.pdx.PdxReader;
+import org.apache.geode.pdx.PdxSerializable;
+import org.apache.geode.pdx.PdxWriter;
+
 
 public class CisCustProdHold 
-	implements Comparable<CisCustProdHold>,Serializable{
+	implements Comparable<CisCustProdHold>,PdxSerializable{
 	/**
 	 * 
 	 */
@@ -78,7 +82,33 @@ public class CisCustProdHold
 		// TODO Auto-generated method stub
 		return 0;
 	}
-	
+	@Override
+	public void toData(PdxWriter writer) {
+		// TODO Auto-generated method stub
+		writer.writeString("statistics_dt", statistics_dt);
+		writer.writeString("cust_id", cust_id);
+		writer.writeString("mng_int_org_id", mng_int_org_id);
+		writer.writeString("prod_cdh", prod_cdh);
+		writer.writeString("hold_cd", hold_cd);
+		writer.writeString("earliest_dt", earliest_dt);
+		writer.writeString("hold_res1", hold_res1);
+		writer.writeString("hold_res2", hold_res2);
+		writer.writeString("hold_res3", hold_res3);
+	}
+	@Override
+	public void fromData(PdxReader reader) {
+		// TODO Auto-generated method stub
+		statistics_dt=reader.readString("statistics_dt");
+		cust_id=reader.readString("cust_id");
+		mng_int_org_id=reader.readString("mng_int_org_id");
+		prod_cdh=reader.readString("prod_cdh");
+		hold_cd=reader.readString("hold_cd");
+		earliest_dt=reader.readString("earliest_dt");
+		hold_res1=reader.readString("hold_res1");
+		hold_res2=reader.readString("hold_res2");
+		hold_res3=reader.readString("hold_res3");
+		
+	}
 	
 	
 }
